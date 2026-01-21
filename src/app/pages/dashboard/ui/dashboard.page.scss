@@ -1,0 +1,51 @@
+/* PAGE SHELL (only the page owns these wrappers) */
+:host {
+  display: block;
+  background: #f6f8fb;
+  min-height: 100vh;
+  overflow-x: clip;
+}
+
+/* Keep everything shrinkable; prevents 320px overflow */
+.dash-page,
+.dash-wrap {
+  width: 100%;
+  max-width: 100%;
+}
+
+:host * {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* WRAP */
+.dash-wrap {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: clamp(12px, 1.6vw, 18px) clamp(12px, 2.2vw, 22px) clamp(20px, 2.6vw, 32px);
+
+  @media (min-width: 1600px) {
+    max-width: 1560px;
+  }
+}
+
+/* MID GRID wrapper lives in page template */
+.mid-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(12px, 1.6vw, 24px);
+  margin-bottom: clamp(14px, 1.8vw, 20px);
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* EXTRA SMALL QUALITY FIXES (320px) that depend on page padding */
+@media (max-width: 360px) {
+  .dash-wrap {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

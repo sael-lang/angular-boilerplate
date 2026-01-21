@@ -1,0 +1,111 @@
+/* also includes base dash-card look for this card */
+:host {
+  background: #ffffff;
+  border: 1px solid #e7edf5;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
+  display: block;
+}
+
+.risk-card {
+  padding: 18px 18px 16px;
+}
+
+.risk-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 14px;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.risk-title {
+  font-size: 14px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.risk-legend {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.risk-legend__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 900;
+  color: #64748b;
+  white-space: nowrap;
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: #10b981;
+  }
+
+  &[data-tone="med"] .dot {
+    background: #f97316;
+  }
+
+  &[data-tone="high"] .dot {
+    background: #ef4444;
+  }
+}
+
+.risk-body {
+  position: relative;
+  overflow: hidden;
+}
+
+.risk-svg {
+  width: 100%;
+  height: clamp(200px, 18vw, 240px);
+  display: block;
+}
+
+.risk-line {
+  fill: none;
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.risk-line--low {
+  stroke: #10b981;
+}
+.risk-line--med {
+  stroke: #f97316;
+}
+.risk-line--high {
+  stroke: #ef4444;
+}
+
+.risk-ticks {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 6px 0;
+}
+
+.risk-tick {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+@media (max-width: 360px) {
+  .risk-tick {
+    font-size: 9px;
+  }
+}

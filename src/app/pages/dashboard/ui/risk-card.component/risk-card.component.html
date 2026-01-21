@@ -1,0 +1,24 @@
+<section class="risk-card">
+  <div class="risk-head">
+    <div class="risk-title">{{ vm.title }}</div>
+
+    <div class="risk-legend">
+      <span class="risk-legend__item" *ngFor="let legend of vm.legend" [attr.data-tone]="legend.tone">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="txt">{{ legend.label }}</span>
+      </span>
+    </div>
+  </div>
+
+  <div class="risk-body">
+    <svg class="risk-svg" viewBox="0 0 640 320" preserveAspectRatio="none" aria-hidden="true">
+      <path class="risk-line risk-line--low" [attr.d]="seriesPath(vm.series[0].points, 600, 260, 20)"></path>
+      <path class="risk-line risk-line--med" [attr.d]="seriesPath(vm.series[1].points, 600, 260, 20)"></path>
+      <path class="risk-line risk-line--high" [attr.d]="seriesPath(vm.series[2].points, 600, 260, 20)"></path>
+    </svg>
+
+    <div class="risk-ticks">
+      <span class="risk-tick" *ngFor="let t of vm.xTicks">{{ t }}</span>
+    </div>
+  </div>
+</section>

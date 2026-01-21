@@ -1,0 +1,17 @@
+<header class="dash-top">
+  <div class="dash-top__left">
+    <h1 class="dash-top__title">{{ title }}</h1>
+
+    <app-dash-range-chip [options]="rangeOptions" [selected]="selectedRange" [open]="rangeOpen" (toggle)="rangeToggle.emit()" (select)="rangeSelect.emit($event)" (close)="rangeClose.emit()" />
+  </div>
+
+  <div class="dash-top__right">
+    <app-dash-search [value]="searchValue" [placeholder]="searchPlaceholder" (valueChange)="searchChange.emit($event)" />
+
+    <app-dash-icon-button [ariaLabel]="notificationsAria" (clicked)="bellClick.emit()">
+      <svg width="20" height="20" viewBox="0 0 24 24">
+        <path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-6V11a7 7 0 1 0-14 0v5L3 18v1h18v-1l-2-2Z" fill="currentColor" />
+      </svg>
+    </app-dash-icon-button>
+  </div>
+</header>

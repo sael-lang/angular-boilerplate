@@ -1,0 +1,19 @@
+<section class="decisions-card">
+  <div class="decisions-head">
+    <div class="decisions-title">{{ vm.title }}</div>
+    <div class="decisions-muted">{{ vm.totalLabel }}</div>
+  </div>
+
+  <div class="decisions-body">
+    <div class="decision-row" *ngFor="let item of vm.items">
+      <div class="decision-top">
+        <div class="decision-label">{{ item.label }}</div>
+        <div class="decision-value">{{ item.value }}</div>
+      </div>
+
+      <div class="decision-bar">
+        <div class="decision-fill" [style.width.%]="item.pct" [attr.data-tone]="item.tone"></div>
+      </div>
+    </div>
+  </div>
+</section>
