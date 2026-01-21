@@ -10,12 +10,12 @@
 // Theme variables
 @use "theme/variables";
 
+// Bootstrap (full framework: reboot + components + utilities)
+@use "bootstrap/scss/bootstrap";
+
 // Base and layout styles
 @use "theme/base";
 @use "theme/layout";
-
-// 3rd party libraries
-@use "bootstrap/scss/bootstrap-grid";
 
 // Mixins
 @use "theme/mixins";
