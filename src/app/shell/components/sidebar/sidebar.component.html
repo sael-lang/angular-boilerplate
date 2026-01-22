@@ -16,10 +16,7 @@
           @if (!item.divider) {
             <a (click)="activateSidebarItem(i)" [class.active]="item.active" [ngClass]="{ disabled: item.disabled }" class="menu-item" id="menu-item-{{ i }}">
               <div class="item">
-                @if (item.icon) {
-                  <!-- still placeholder i tag (no behavior change) -->
-                  <i class="ico" aria-hidden="true">■</i>
-                }
+                <i *ngIf="item.icon" [class]="faIconClass(item.icon)" aria-hidden="true"></i>
                 <span>{{ item.title | translate }}</span>
               </div>
 
@@ -36,7 +33,8 @@
                   @if (shellService.allowedAccess(subItem)) {
                     <li [class.disabled]="subItem.disabled">
                       <a (click)="activateSidebarSubItem(i, subItem)" [ngClass]="{ disabled: subItem.disabled }" [routerLink]="subItem.href || undefined" routerLinkActive="active">
-                        <i class="sub-ico" aria-hidden="true">•</i>
+                        <i *ngIf="subItem.icon" [class]="faIconClass(subItem.icon)" aria-hidden="true"></i>
+                        <i *ngIf="!subItem.icon" class="fa-regular fa-circle-dot" aria-hidden="true"></i>
                         <span>{{ subItem.title | translate }}</span>
                       </a>
                     </li>

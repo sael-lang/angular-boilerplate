@@ -100,4 +100,22 @@ export class SidebarComponent implements OnInit {
   activateSidebarSubItem(index: number, subItem: NavMenuItem): void {
     this.shellService.activateNavSubItem(index, subItem, this.sidebarItems);
   }
+
+  faIconClass(icon?: string): string {
+    if (!icon) {
+      return '';
+    }
+
+    const normalized = icon.trim().replace(/\s+/g, ' ');
+    if (!normalized) {
+      return '';
+    }
+
+    const hasExplicitStyle = /(fa-(solid|regular|brands))\b/.test(normalized);
+    if (hasExplicitStyle || !normalized.startsWith('fa-')) {
+      return normalized;
+    }
+
+    return `fa-solid ${normalized}`;
+  }
 }
