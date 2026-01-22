@@ -147,10 +147,10 @@
   left: 18px;
   bottom: 16px;
   display: flex;
-  gap: 8px;
+  gap: 2px;
   align-items: flex-end;
-  height: 44px;
-  max-width: calc(100% - 36px);
+  height: 60px;
+  max-width: calc(100% - 7%);
   overflow: hidden;
 
   @media (max-width: 420px) {
