@@ -1,0 +1,13 @@
+<div class="dash-chip">
+  <button class="dash-chip__button" type="button" (click)="onToggleClick($event)" [attr.aria-expanded]="open">
+    {{ selected.label }}
+  </button>
+
+  <ul class="dash-chip__menu" [class.show]="open" role="menu" [attr.aria-hidden]="!open">
+    <li *ngFor="let option of options">
+      <button class="dash-chip__item" type="button" (click)="onSelect(option)">
+        {{ option.label }}
+      </button>
+    </li>
+  </ul>
+</div>

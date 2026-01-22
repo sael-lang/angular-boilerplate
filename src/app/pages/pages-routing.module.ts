@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Shell } from '@app/shell/services/shell.service';
-import { DashboardComponent } from '@pages/dashboard/dashboard.component';
+import { DashboardPage } from '@pages/dashboard/ui/dashboard.page';
 import { requestsRoutes } from '@pages/requests';
 
 const routes: Routes = [
@@ -13,7 +13,7 @@ const routes: Routes = [
     },
     {
       path: 'dashboard',
-      component: DashboardComponent,
+      component: DashboardPage,
     },
     {
       path: 'users',

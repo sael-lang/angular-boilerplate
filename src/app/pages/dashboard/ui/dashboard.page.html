@@ -1,0 +1,37 @@
+<div class="dash-page">
+  <div class="dash-wrap">
+    <!-- TOP -->
+    <app-dash-topbar
+      [title]="vm.header.title"
+      [rangeOptions]="vm.header.rangeOptions"
+      [selectedRange]="selectedRange()"
+      [rangeOpen]="rangeOpen()"
+      [searchValue]="search()"
+      [searchPlaceholder]="vm.header.searchPlaceholder"
+      [notificationsAria]="vm.header.notificationsAria"
+      (rangeToggle)="toggleRange()"
+      (rangeSelect)="setRange($event)"
+      (rangeClose)="closeRange()"
+      (searchChange)="onSearchChange($event)"
+      (bellClick)="onBellClick()"
+    ></app-dash-topbar>
+
+    <!-- KPI GRID -->
+    <app-kpi-grid [kpis]="vm.kpis"></app-kpi-grid>
+
+    <!-- MID GRID -->
+    <div class="mid-grid">
+      <app-risk-card class="dash-card risk-card" [vm]="vm.riskCard"></app-risk-card>
+      <app-decisions-card class="dash-card decisions-card" [vm]="vm.decisionsCard"></app-decisions-card>
+    </div>
+
+    <!-- ACTIVITY -->
+    <app-activity-table
+      class="dash-card dash-activity"
+      [title]="vm.activityCard.title"
+      [downloadLabel]="vm.activityCard.downloadLabel"
+      [columns]="vm.activityCard.columns"
+      [rows]="filteredActivities()"
+    ></app-activity-table>
+  </div>
+</div>

@@ -57,4 +57,10 @@ export const webSidebarMenuItems: NavMenuItem[] = [
     icon: 'fa-cog',
     divider: true,
   },
+  {
+    href: '/logout',
+    title: 'Logout',
+    active: false,
+    icon: 'fa-right-from-bracket',
+  },
 ];

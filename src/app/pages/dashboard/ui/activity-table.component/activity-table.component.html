@@ -1,0 +1,41 @@
+<section class="dash-activity">
+  <div class="dash-activity__head">
+    <div class="dash-panel__title">{{ title }}</div>
+    <a class="dash-link" href="javascript:void(0)" (click)="downloadClick.emit()">
+      {{ downloadLabel }}
+    </a>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table dash-table align-middle">
+      <thead>
+        <tr>
+          <th>{{ columns.time }}</th>
+          <th>{{ columns.type }}</th>
+          <th>{{ columns.status }}</th>
+          <th>{{ columns.approver }}</th>
+          <th class="text-end">{{ columns.action }}</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let row of rows">
+          <td>{{ row.time }}</td>
+          <td>{{ row.type }}</td>
+          <td>
+            <span class="dash-status" [ngClass]="statusClass(row.status)">
+              <span class="dot" aria-hidden="true"></span>
+              <span class="txt">{{ row.status }}</span>
+            </span>
+          </td>
+          <td>{{ row.approver }}</td>
+          <td class="text-end">
+            <a class="dash-link" href="javascript:void(0)" (click)="rowActionClick.emit(row)">
+              {{ row.actionLabel }}
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
