@@ -1,0 +1,285 @@
+<div class="review-page">
+  <header class="review-topbar">
+    <div class="container-fluid h-100 px-4 px-md-5 d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-4">
+        <a class="d-flex align-items-center gap-2 text-decoration-none" style="color: #2866eb" routerLink="/requests">
+          <span class="material-symbols-outlined">arrow_back</span>
+          <span class="small fw-semibold">Back to Requests</span>
+        </a>
+        <div class="d-none d-md-block" style="height: 32px; width: 1px; background: #e5e7eb"></div>
+        <div class="d-flex flex-column">
+          <div class="d-flex align-items-center gap-2">
+            <h1 class="h5 fw-black mb-0">{{ requestId || 'REQ-20240115-847' }}</h1>
+            <span class="risk-pill risk-pill-high">High Risk</span>
+          </div>
+          <div class="small text-body-secondary">Submitted 2 hours ago by Legal Operations</div>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center gap-3">
+        <div class="d-flex" style="margin-right: 6px">
+          <div
+            class="rounded-circle border border-2 border-white"
+            style="
+              width: 32px;
+              height: 32px;
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAKWc4AA4Ciz83OQdxSVnwK1dozKbghk9txZ-NJuLIotI8BRMmmMI9hxvWz49SC_BzqmnEbrAUD3XvDtcmq6rSfgA-woc1oNYoidKC3mb2dOo01bXpFVQrSHdb0fvcFg3ZbeGj0QEP85XX0HXATyyTE0KFR_s58G7yrubv-IPQX1Qib9Ky3uXivVBz-EjPWKOZ-07nNP8kCzPUaErKmk7ejVmeRsaL1qpbp3K0Q1vJoYhzjkPIJIysHvy-xAKpj1vN2lAuAfcX3TcY');
+              background-size: cover;
+              background-position: center;
+              margin-left: -8px;
+            "
+          ></div>
+          <div
+            class="rounded-circle border border-2 border-white d-flex align-items-center justify-content-center fw-bold"
+            style="width: 32px; height: 32px; background: #e5e7eb; margin-left: -8px; font-size: 10px"
+          >
+            +3
+          </div>
+        </div>
+
+        <button class="btn btn-light border-0" type="button" aria-label="More">
+          <span class="material-symbols-outlined" style="color: #6b7280">more_vert</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="sla-bar">
+    <div class="container-fluid px-4 px-md-5 py-3 d-flex align-items-center justify-content-between gap-3 flex-wrap">
+      <div class="d-flex align-items-center gap-2">
+        <span class="material-symbols-outlined" style="color: #ea580c">timer</span>
+        <div class="small fw-semibold" style="color: #9a3412">SLA Breach Warning: Action required within the next 4 hours to maintain policy compliance.</div>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <div class="d-flex align-items-center gap-2">
+          <div class="px-2 py-1 rounded border fw-bold font-monospace" style="background: #fff; border-color: #fed7aa; color: #c2410c">04</div>
+          <div class="text-uppercase fw-bold" style="font-size: 10px; color: #fdba74">Hrs</div>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <div class="px-2 py-1 rounded border fw-bold font-monospace" style="background: #fff; border-color: #fed7aa; color: #c2410c">22</div>
+          <div class="text-uppercase fw-bold" style="font-size: 10px; color: #fdba74">Min</div>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <div class="px-2 py-1 rounded border fw-bold font-monospace" style="background: #fff; border-color: #fed7aa; color: #c2410c">15</div>
+          <div class="text-uppercase fw-bold" style="font-size: 10px; color: #fdba74">Sec</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="meta-ribbon">
+    <div class="container-fluid px-4 px-md-5 py-3 d-flex align-items-center gap-5 overflow-auto">
+      <div class="d-flex flex-column gap-1" style="min-width: max-content">
+        <div class="meta-label">Category</div>
+        <div class="d-flex align-items-center gap-2">
+          <span class="material-symbols-outlined" style="color: #3b82f6; font-size: 18px">gavel</span>
+          <div class="meta-value">Legal - Contract</div>
+        </div>
+      </div>
+      <div class="d-flex flex-column gap-1" style="min-width: max-content">
+        <div class="meta-label">Requester</div>
+        <div class="d-flex align-items-center gap-2">
+          <div
+            class="rounded-circle"
+            style="
+              width: 20px;
+              height: 20px;
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDWZiM__t83uirp8gXoAZJjEcph9Ov0VtI7oAwmpFVXhe82xabOfOtY5icngWRIK1xK4IXvR5vy4iZf5QMn7AQRj47Xa-3E7L6UwQBVwKi9cuT065pkxd8Cif7hCFjJb9_ZAUdLqYpAI8zpa61XPsco9KSmL0xZy1ZFhDluYoOIzqdqy_QvFRfWiwQaI4eFkWMp5SGwRvtUyeEA5_e_GB4BcSetOB_RyflNqbaLurjAM9qqpklis04Z7tOFIdqvpj9oH7zi8qUIiZg');
+              background-size: cover;
+              background-position: center;
+            "
+          ></div>
+          <div class="meta-value">Sarah Chen</div>
+        </div>
+      </div>
+      <div class="d-flex flex-column gap-1" style="min-width: max-content">
+        <div class="meta-label">AI Governance</div>
+        <div class="d-flex align-items-center gap-2">
+          <span class="material-symbols-outlined" style="color: #22c55e; font-size: 18px">smart_toy</span>
+          <div class="meta-value">OpenAI GPT-4 Analysis</div>
+        </div>
+      </div>
+      <div class="d-flex flex-column gap-1 flex-grow-1" style="min-width: 280px">
+        <div class="meta-label">Context</div>
+        <div class="d-flex align-items-center gap-2 text-truncate">
+          <span class="material-symbols-outlined" style="color: #9ca3af; font-size: 18px">info</span>
+          <div class="meta-value text-truncate" style="font-style: italic">"New vendor agreement for Q3 enterprise infrastructure scaling"</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="container-fluid px-4 px-md-5 py-4">
+    <div class="mx-auto" style="max-width: 1600px">
+      <div class="row g-4">
+        <div class="col-12 col-lg-7">
+          <div class="review-card level-3-shadow p-4 p-md-5">
+            <div class="d-flex align-items-start justify-content-between gap-3 mb-4 pb-3 border-bottom">
+              <div>
+                <h2 class="h3 fw-bold mb-1 doc-title">Mutual Non-Disclosure Agreement</h2>
+                <div class="small text-body-secondary">Version 1.4-REV • Last modified Jan 15, 2024</div>
+              </div>
+              <button class="btn btn-outline-secondary btn-sm d-inline-flex align-items-center gap-2" type="button">
+                <span class="material-symbols-outlined" style="font-size: 18px">download</span>
+                Export PDF
+              </button>
+            </div>
+
+            <div class="prose-like">
+              <p>
+                <strong>1. DEFINITION OF CONFIDENTIAL INFORMATION.</strong> Confidential Information means any non-public information, technical data, or know-how, including, but not limited to, that
+                which relates to research, product plans, products, services, customers, markets, software, developments, inventions, processes, designs, drawings, engineering, hardware configuration
+                information, marketing or finances...
+              </p>
+              <p>
+                <strong>2. NON-DISCLOSURE.</strong> The parties agree not to use the Confidential Information of the other party for any purpose except to evaluate and engage in discussions concerning
+                a potential business relationship between the parties.
+              </p>
+              <p>
+                <strong>3. <span class="highlight-clause">INDEMNIFICATION AND LIABILITY.</span></strong>
+                <span class="highlight-clause"
+                  >The Receiving Party shall indemnify and hold harmless the Disclosing Party from any and all claims, losses, liabilities, and expenses arising out of or related to any breach of this
+                  Agreement. In no event shall the Receiving Party's total liability under this clause be capped at less than 5x the total contract value.</span
+                >
+              </p>
+              <p>
+                <strong>4. <span class="highlight-clause">GOVERNING LAW.</span></strong>
+                <span class="highlight-clause"
+                  >This Agreement shall be governed by and construed in accordance with the laws of the State of Delaware, without regard to conflict of law principles. Any legal action or proceeding
+                  arising under this Agreement will be brought exclusively in the federal or state courts located in the Northern District of California.</span
+                >
+              </p>
+              <p><strong>5. TERM.</strong> This Agreement shall survive for a period of five (5) years from the date of disclosure of the last item of Confidential Information.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-5">
+          <div class="right-sticky d-flex flex-column gap-4">
+            <div class="rounded-3 border p-3" style="background: #f3f4f6; border-color: #e5e7eb">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="material-symbols-outlined" style="font-size: 18px; color: #6b7280">terminal</span>
+                <div class="meta-label" style="color: #6b7280">Original Prompt</div>
+              </div>
+              <div class="font-monospace small" style="color: #374151; line-height: 1.6">
+                Analyze the attached Mutual NDA for deviations from our "Standard Corporate Vendor Policy v4". Flag any liability caps above 1x contract value and check jurisdiction alignment.
+              </div>
+            </div>
+
+            <div class="review-card level-3-shadow p-4">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="fw-bold d-flex align-items-center gap-2">
+                  <span class="material-symbols-outlined" style="color: #f97316">warning</span>
+                  Risk Analysis
+                </div>
+                <span class="badge text-bg-danger" style="font-size: 10px; letter-spacing: 0.06em">2 CRITICAL</span>
+              </div>
+              <ul class="list-unstyled mb-0 d-flex flex-column gap-3">
+                <li class="d-flex gap-3">
+                  <div class="rounded-circle mt-2 flex-shrink-0" style="width: 8px; height: 8px; background: #ef4444"></div>
+                  <div>
+                    <div class="fw-semibold">Unusual Liability Cap</div>
+                    <div class="small text-body-secondary">Clause 3 specifies a 5x liability cap, which exceeds our standard maximum of 1x for vendor NDAs.</div>
+                  </div>
+                </li>
+                <li class="d-flex gap-3">
+                  <div class="rounded-circle mt-2 flex-shrink-0" style="width: 8px; height: 8px; background: #f97316"></div>
+                  <div>
+                    <div class="fw-semibold">Jurisdiction Mismatch</div>
+                    <div class="small text-body-secondary">Governing law is Delaware but courts are in California. Policy recommends alignment to avoid complexity.</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-12 col-sm-6">
+                <div class="review-card p-3">
+                  <div class="meta-label mb-2">Policy Link</div>
+                  <a class="d-flex align-items-center gap-2 text-decoration-none" style="color: #2866eb" href="#">
+                    <span class="material-symbols-outlined" style="font-size: 18px">description</span>
+                    <span class="fw-bold small">Standard NDA v4.2</span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="review-card p-3">
+                  <div class="meta-label mb-2">Precedent</div>
+                  <div class="d-flex align-items-center gap-2" style="color: #374151">
+                    <span class="material-symbols-outlined" style="font-size: 18px">history</span>
+                    <span class="fw-bold small">REQ-722 (Rejected)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-card p-4">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <div class="small fw-bold" style="color: #4b5563">AI Confidence Score</div>
+                <div class="small fw-black" style="color: #2866eb">87%</div>
+              </div>
+              <div class="progress" style="height: 8px; background: #f3f4f6">
+                <div class="progress-bar" role="progressbar" style="width: 87%; background: #2866eb"></div>
+              </div>
+              <div class="meta-label mt-2" style="letter-spacing: 0; text-transform: none">High confidence based on 142 similar document reviews.</div>
+            </div>
+
+            <div class="review-card level-3-shadow p-4 border" style="border-width: 2px !important; border-color: rgba(40, 102, 235, 0.2) !important; position: relative">
+              <div
+                class="position-absolute"
+                style="
+                  top: -12px;
+                  left: 16px;
+                  background: #2866eb;
+                  color: #fff;
+                  font-size: 10px;
+                  font-weight: 800;
+                  letter-spacing: 0.14em;
+                  text-transform: uppercase;
+                  padding: 4px 12px;
+                  border-radius: 9999px;
+                "
+              >
+                Your Decision
+              </div>
+
+              <div class="d-flex flex-column gap-3 pt-2">
+                <textarea class="form-control" style="min-height: 110px" placeholder="Add a comment or rationale for your decision..."></textarea>
+                <label class="d-flex align-items-start gap-2 small" style="color: #4b5563">
+                  <input class="form-check-input mt-1" type="checkbox" style="accent-color: #2866eb" />
+                  <span>I have reviewed the flagged risks and confirmed alignment with internal stakeholders.</span>
+                </label>
+
+                <div class="d-grid gap-2 pt-2">
+                  <button class="btn fw-bold text-white d-inline-flex align-items-center justify-content-center gap-2" style="background: #16a34a" type="button">
+                    <span class="material-symbols-outlined">check_circle</span>
+                    Approve Request
+                  </button>
+                  <button class="btn fw-bold text-white d-inline-flex align-items-center justify-content-center gap-2" style="background: #f97316" type="button">
+                    <span class="material-symbols-outlined">edit_note</span>
+                    Request Changes
+                  </button>
+                  <button class="btn fw-bold d-inline-flex align-items-center justify-content-center gap-2" style="background: #fff; border: 2px solid #dc2626; color: #dc2626" type="button">
+                    <span class="material-symbols-outlined">block</span>
+                    Reject
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="mt-4 py-4 border-top" style="background: #ffffff; border-color: #e5e7eb">
+    <div class="container-fluid px-4 px-md-5 d-flex align-items-center justify-content-between gap-3 flex-wrap small" style="color: #9ca3af">
+      <div>© 2024 ApprovalLayer. All decision logs are encrypted and cryptographically signed.</div>
+      <div class="d-flex align-items-center gap-3">
+        <a href="#" class="text-decoration-none" style="color: inherit">Audit Log</a>
+        <a href="#" class="text-decoration-none" style="color: inherit">Compliance Report</a>
+        <a href="#" class="text-decoration-none" style="color: inherit">Help Center</a>
+      </div>
+    </div>
+  </footer>
+</div>

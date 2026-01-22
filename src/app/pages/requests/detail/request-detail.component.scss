@@ -1,0 +1,139 @@
+$primary: #2866eb;
+$bg-light: #f9fafb;
+$bg-dark: #21242c;
+$panel-dark: #1a1d23;
+$muted: #6b7280;
+
+.review-page {
+  min-height: 100vh;
+  background: $bg-light;
+  color: #111318;
+}
+
+.review-topbar {
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.review-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+}
+
+.level-3-shadow {
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.highlight-clause {
+  background-color: #fefce8;
+  border-bottom: 2px solid #facc15;
+  padding: 0 2px;
+}
+
+.risk-pill {
+  border-radius: 9999px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 1px solid;
+  white-space: nowrap;
+}
+
+.risk-pill-high {
+  background: #ffedd5;
+  border-color: #fed7aa;
+  color: #c2410c;
+}
+
+.sla-bar {
+  background: #fff7ed;
+  border-bottom: 1px solid #ffedd5;
+}
+
+.meta-ribbon {
+  background: #ffffff;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.meta-label {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+
+.meta-value {
+  font-weight: 600;
+}
+
+.doc-title {
+  letter-spacing: -0.02em;
+}
+
+.prose-like p {
+  margin-bottom: 1rem;
+  color: #333;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.prose-like strong {
+  color: #111318;
+}
+
+.right-sticky {
+  position: sticky;
+  top: 112px;
+}
+
+:host-context(.dark) {
+  .review-page {
+    background: $bg-dark;
+    color: #f3f4f6;
+  }
+
+  .review-topbar,
+  .meta-ribbon,
+  .review-card {
+    background: $panel-dark;
+    border-color: #374151;
+  }
+
+  .sla-bar {
+    background: rgba(234, 88, 12, 0.12);
+    border-bottom-color: rgba(234, 88, 12, 0.18);
+  }
+
+  .prose-like p {
+    color: #e5e7eb;
+  }
+
+  .prose-like strong {
+    color: #ffffff;
+  }
+
+  .meta-label {
+    color: #9ca3af;
+  }
+
+  .risk-pill-high {
+    background: rgba(234, 88, 12, 0.16);
+    border-color: rgba(234, 88, 12, 0.22);
+    color: #fdba74;
+  }
+
+  .highlight-clause {
+    background-color: rgba(250, 204, 21, 0.12);
+    border-bottom-color: rgba(250, 204, 21, 0.7);
+  }
+}

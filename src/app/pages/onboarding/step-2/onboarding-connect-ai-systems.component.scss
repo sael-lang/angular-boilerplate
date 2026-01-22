@@ -1,0 +1,81 @@
+@use "../onboarding";
+
+.help-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 0.5rem;
+  display: grid;
+  place-items: center;
+  color: #616e89;
+  border: 0;
+  background: transparent;
+}
+
+.help-button:hover {
+  background: #f0f1f4;
+}
+
+:host-context(.dark) {
+  .help-button:hover {
+    background: #373c44;
+  }
+}
+
+.onboarding-toggle {
+  width: 40px;
+  height: 24px;
+  border: 0;
+  border-radius: 9999px;
+  position: relative;
+  cursor: pointer;
+  background: #dbdee6;
+}
+
+.onboarding-toggle::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(17, 19, 24, 0.12);
+  transition: transform 0.15s ease-in-out;
+}
+
+.onboarding-toggle.is-on {
+  background: #2866eb;
+}
+
+.onboarding-toggle.is-on::after {
+  transform: translateX(16px);
+  box-shadow: none;
+}
+
+.onboarding-toggle:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(40, 102, 235, 0.2);
+}
+
+:host-context(.dark) {
+  .onboarding-toggle {
+    background: #4a505c;
+  }
+}
+
+.provider-header {
+  border-bottom: 1px solid #dbdee6;
+}
+
+:host-context(.dark) {
+  .provider-header {
+    border-bottom-color: #373c44;
+  }
+}
+
+.privacy-panel {
+  border-radius: 0.75rem;
+  background: rgba(40, 102, 235, 0.05);
+  border: 1px solid rgba(40, 102, 235, 0.2);
+}

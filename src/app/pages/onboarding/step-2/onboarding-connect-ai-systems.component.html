@@ -1,0 +1,144 @@
+<div class="onboarding-page">
+  <header class="onboarding-header d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center gap-3">
+      <div class="onboarding-brand-icon">
+        <span class="material-symbols-outlined fs-4">verified_user</span>
+      </div>
+      <div class="fw-black fs-5 onboarding-title">ApprovalLayer</div>
+    </div>
+
+    <div class="d-flex align-items-center gap-2">
+      <div class="d-flex align-items-center gap-2">
+        <div class="onboarding-progress-dot is-active"></div>
+        <div class="onboarding-progress-dot is-active"></div>
+        <div class="onboarding-progress-dot"></div>
+        <div class="onboarding-progress-dot"></div>
+        <div class="onboarding-progress-dot"></div>
+      </div>
+      <div class="ms-3 small fw-medium onboarding-muted">Step 2 of 5</div>
+    </div>
+
+    <div style="width: 96px" class="d-flex justify-content-end">
+      <button class="help-button" type="button" aria-label="Help">
+        <span class="material-symbols-outlined">help_outline</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="flex-grow-1">
+    <div class="onboarding-container-1200 onboarding-section-y">
+      <div class="text-center onboarding-container-672" style="margin-bottom: 40px">
+        <h1 class="display-6 fw-black onboarding-title mb-3">Connect your AI systems</h1>
+        <p class="lead onboarding-muted mb-0">Choose the AI providers you want to govern. You can add more later in your system settings.</p>
+      </div>
+
+      <div class="row g-4" style="margin-bottom: 48px">
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="onboarding-card is-selected overflow-hidden h-100">
+            <div class="provider-header p-4 d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center gap-3">
+                <div class="onboarding-logo-wrap">
+                  <div
+                    class="onboarding-logo"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAqSwxfbVOVv-MXD5FxEaRFovqh0SjZEAyHGm1ceF25mHx-j02QQxQjUKS36mtdfvrOmMLjk588vrec4gs8pSEDwcJ1UWPKix8nS50IRAxkoAPNZwHkJ-3d4-H4oerQCL2n55nJLKw1THOh3zluVWupfACm5k7nBQ4cPJGUSs3wGcUqU59cERWqkF3JsuVliFMp8bfM-3vl6m0G8YuH7iNprTUUuOVJNDsnnDcC4LGxVW2T-oR2__favMH2fJD-FwnEAyHJkeiHyaA');
+                    "
+                  ></div>
+                </div>
+                <div class="fw-bold fs-5">OpenAI</div>
+              </div>
+              <button class="onboarding-toggle is-on" type="button" aria-label="Toggle OpenAI"></button>
+            </div>
+
+            <div class="p-4">
+              <div class="mb-3">
+                <label class="form-label fw-semibold mb-2">API Key</label>
+                <input class="form-control onboarding-form-control" type="password" placeholder="sk-..." value="••••••••••••••••••••" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label fw-semibold mb-2">System name</label>
+                <input class="form-control onboarding-form-control" type="text" placeholder="e.g. Production GPT-4" />
+              </div>
+
+              <div class="d-grid gap-2 pt-2">
+                <button class="btn onboarding-btn-outline d-inline-flex align-items-center justify-content-center gap-2" type="button" style="height: 44px; border-radius: 0.5rem">
+                  <span class="material-symbols-outlined" style="font-size: 18px">bolt</span>
+                  Test connection
+                </button>
+                <a class="btn onboarding-btn-primary" routerLink="/onboarding/step-3" style="height: 44px; border-radius: 0.5rem; display: grid; place-items: center">Save &amp; Continue</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="onboarding-card h-100">
+            <div class="p-4">
+              <div class="d-flex align-items-center justify-content-between mb-4">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="onboarding-logo-wrap">
+                    <div
+                      class="onboarding-logo"
+                      style="
+                        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBIoovJyOHvUsqwzwMYP7JRFncCIb1H_XpN6Za6x__FCRZ9WECKEhHPaAK3T0erolYx3WrGQyDIGZvb1DFBZNCWto69LVfNoa_aTzhPBOKVD_ikoXYZ7-rurVDyZmDyD35Ts1lmGr9xJlp2TSej55CmxZW1BRW9VSFyo9urkEk6LMPXzSQ3GdWQDxI8Bn9mezTMZ26mpF4Fq_nM4vitcVz_U4UcveP8uOm3OfuIqBsdKW33tWc6-_4fa0sbV9Tp1Uu7tSbLpRaCVnQ');
+                      "
+                    ></div>
+                  </div>
+                  <div class="fw-bold fs-5">Anthropic</div>
+                </div>
+                <button class="onboarding-toggle" type="button" aria-label="Toggle Anthropic"></button>
+              </div>
+
+              <p class="small onboarding-muted mb-4">Govern Claude models via API. Access 3.5 Sonnet, Opus, and Haiku instances with enterprise controls.</p>
+            </div>
+
+            <div class="p-4 pt-0">
+              <button class="btn onboarding-btn-outline w-100" type="button" style="height: 44px; border-radius: 0.5rem">Connect with API key</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="onboarding-card h-100">
+            <div class="p-4">
+              <div class="d-flex align-items-center justify-content-between mb-4">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="onboarding-logo-wrap">
+                    <span class="material-symbols-outlined onboarding-muted">api</span>
+                  </div>
+                  <div class="fw-bold fs-5">Custom API</div>
+                </div>
+                <button class="onboarding-toggle" type="button" aria-label="Toggle Custom API"></button>
+              </div>
+
+              <p class="small onboarding-muted mb-4">Connect via your own enterprise endpoint or self-hosted LLM instances (Llama 3, Mistral, etc.).</p>
+            </div>
+
+            <div class="p-4 pt-0">
+              <button class="btn onboarding-btn-outline w-100" type="button" style="height: 44px; border-radius: 0.5rem">Add custom endpoint</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="privacy-panel p-4 d-flex gap-3 align-items-start mx-auto" style="max-width: 672px">
+        <span class="material-symbols-outlined" style="color: #2866eb">info</span>
+        <div class="small lh-lg">
+          <div class="fw-bold mb-1" style="color: #2866eb">Privacy &amp; Security</div>
+          <div>Your API keys are encrypted at rest using AES-256 and never stored in plain text. ApprovalLayer only acts as a governance proxy and does not use your data for model training.</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="onboarding-footer mt-auto">
+    <div class="onboarding-container-1200 onboarding-footer-inner">
+      <a class="btn onboarding-btn-outline d-inline-flex align-items-center gap-2 px-4" routerLink="/onboarding" style="height: 48px; border-radius: 0.5rem">
+        <span class="material-symbols-outlined">arrow_back</span>
+        Back
+      </a>
+      <button class="btn onboarding-skip-btn" type="button">Skip for now</button>
+      <button class="btn onboarding-btn-disabled px-5" type="button" disabled style="height: 48px; border-radius: 0.5rem">Continue</button>
+    </div>
+  </footer>
+</div>

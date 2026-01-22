@@ -1,0 +1,154 @@
+<div class="test-finish">
+  <header class="test-header d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center gap-3">
+      <div class="test-mark">
+        <svg class="test-mark-icon" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z" fill="currentColor" />
+        </svg>
+      </div>
+      <div class="test-brand">ApprovalLayer</div>
+    </div>
+
+    <div class="d-flex align-items-center gap-4">
+      <div class="d-flex flex-column align-items-end gap-1">
+        <div class="test-step-label">Step 5 of 5</div>
+        <div class="d-flex gap-2">
+          <div class="test-dot is-active"></div>
+          <div class="test-dot is-active"></div>
+          <div class="test-dot is-active"></div>
+          <div class="test-dot is-active"></div>
+          <div class="test-dot is-active"></div>
+        </div>
+      </div>
+
+      <div class="test-divider" aria-hidden="true"></div>
+
+      <div
+        class="test-avatar"
+        aria-label="User avatar"
+        style="
+          background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAMtx48wDr0dRZ8_5MpEumcnVf_leTY3NQ1Tgfrz5UQDR0USj9dcYw9PfTdrvYUkXnvlKXPpZDYAhi65NwabDJL8Si0rC1ShySDWmHuobuKojtK1sYwEFcUoUcjKk0KBYcN6FFp1TyDjrzF8RNXo4EnrH4Tsg8pUOrsyTGRhtRVu9T4tMpF5ebEmv0kODZmCsK-zYZbl9jduNgdj4K7FnGUafPeFFccHfzLlAV-sIZ6ritVv2XubXPkatOd22W4VWhwPBTDA__82Hs');
+        "
+      ></div>
+    </div>
+  </header>
+
+  <main class="flex-grow-1">
+    <div class="test-container test-section">
+      <div class="mb-5">
+        <h1 class="test-title mb-2">Test your workflow</h1>
+        <p class="test-subtitle mb-0">Let's make sure everything is set up correctly before you go live.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-lg-8 d-flex flex-column gap-4">
+          <div class="test-card p-4 p-md-5">
+            <div class="d-flex align-items-center justify-content-between mb-4">
+              <div class="test-card-title">Your setup summary</div>
+              <button class="btn test-link" type="button">Edit configuration</button>
+            </div>
+
+            <div class="row g-4">
+              <div class="col-12 col-md-6">
+                <div class="test-label">AI Engine</div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="material-symbols-outlined" style="color: #16a34a">check_circle</span>
+                  <div class="test-value">OpenAI GPT-4</div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="test-label">Scope</div>
+                <span class="test-pill">Legal Contracts</span>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="test-label">Governance</div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="material-symbols-outlined test-icon-muted">group</span>
+                  <div class="test-value">2 approvers required</div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="test-label">Integrations</div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="material-symbols-outlined test-icon-muted">notifications_active</span>
+                  <div class="test-value">Slack notifications active</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="test-card p-4 p-md-5">
+            <div class="test-card-title mb-1">Run a simulation</div>
+            <p class="test-help mb-3">Provide a sample request to see how the AI handles the first layer of governance.</p>
+            <textarea class="form-control test-textarea" id="test-prompt" rows="4">
+Review the attached Mutual NDA for clauses related to indemnity and data privacy. Ensure the governing law is set to New York state.</textarea
+            >
+            <div class="d-flex justify-content-end mt-3">
+              <button class="btn test-secondary d-inline-flex align-items-center gap-2" type="button">
+                <span class="material-symbols-outlined">bolt</span>
+                Send test request
+              </button>
+            </div>
+          </div>
+
+          <div class="test-success d-flex gap-3 align-items-start p-4">
+            <div class="test-success-badge">
+              <span class="material-symbols-outlined">check</span>
+            </div>
+            <div>
+              <div class="test-success-title">Test request sent successfully!</div>
+              <div class="test-success-subtitle">Notifications were sent to the 2 assigned approvers via Slack. They can now review the AI-generated summary.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <div class="test-side p-4 p-md-5">
+            <div class="test-card-title mb-4">What happens next</div>
+
+            <div class="d-flex flex-column gap-4">
+              <div class="d-flex gap-3">
+                <div class="test-step-box">1</div>
+                <div>
+                  <div class="test-side-title">AI analyzes request</div>
+                  <div class="test-side-desc">Our system scans for risks and applies your pre-set policy rules automatically.</div>
+                </div>
+              </div>
+              <div class="d-flex gap-3">
+                <div class="test-step-box">2</div>
+                <div>
+                  <div class="test-side-title">Approvers notified</div>
+                  <div class="test-side-desc">Smart alerts are sent to the relevant team members with decision context.</div>
+                </div>
+              </div>
+              <div class="d-flex gap-3">
+                <div class="test-step-box">3</div>
+                <div>
+                  <div class="test-side-title">Decision recorded</div>
+                  <div class="test-side-desc">One-click approvals or rejections are captured with timestamped logs.</div>
+                </div>
+              </div>
+              <div class="d-flex gap-3">
+                <div class="test-step-box">4</div>
+                <div>
+                  <div class="test-side-title">Audit trail generated</div>
+                  <div class="test-side-desc">Every step is documented for compliance and reporting requirements.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="test-footer">
+    <div class="test-footer-inner">
+      <a class="btn test-back" routerLink="/onboarding/step-4">Back</a>
+      <a class="btn test-primary d-inline-flex align-items-center gap-2" routerLink="/dashboard">
+        Go to Dashboard
+        <span class="material-symbols-outlined" style="color: #fff">arrow_forward</span>
+      </a>
+    </div>
+  </footer>
+</div>
