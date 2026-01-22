@@ -22,12 +22,38 @@ export class SidebarComponent implements OnInit {
   sidebarExtendedItem = -1;
   navExpanded = true;
 
+  // purely display (no functional impact)
+  userName = 'Alex Rivera';
+  userRole = 'Executive Admin';
+  userInitials = 'AR';
+
   constructor(
     private readonly _router: Router,
     private readonly _credentialsService: CredentialsService,
     public shellService: ShellService,
   ) {
     this.sidebarItems = webSidebarMenuItems;
+
+    // Try to derive display name/role from credentials if available (safe fallback)
+    try {
+      const creds: any = (this._credentialsService as any)?.credentials;
+      const fullName: string | undefined = creds?.username || creds?.email || creds?.name;
+      const role: string | undefined = Array.isArray(creds?.roles) ? creds.roles?.[0] : creds?.role;
+
+      if (fullName) this.userName = String(fullName);
+      if (role) this.userRole = String(role);
+
+      const initials = this.userName
+        .split(' ')
+        .filter(Boolean)
+        .slice(0, 2)
+        .map((p) => p[0]?.toUpperCase())
+        .join('');
+
+      if (initials) this.userInitials = initials;
+    } catch {
+      // ignore - keep defaults
+    }
   }
 
   ngOnInit(): void {
