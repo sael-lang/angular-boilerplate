@@ -1,0 +1,138 @@
+<div class="onboarding-page">
+  <header class="onboarding-header">
+    <div class="header__left">
+      <div class="brand">
+        <div class="brand__icon" aria-hidden="true">
+          <span class="material-symbols-outlined">verified_user</span>
+        </div>
+        <h2 class="brand__name">ApprovalLayer</h2>
+      </div>
+    </div>
+
+    <div class="header__center" aria-label="Onboarding progress">
+      <div class="stepper__dots" aria-hidden="true">
+        <div class="stepper__dot stepper__dot--active"></div>
+        <div class="stepper__dot stepper__dot--active"></div>
+        <div class="stepper__dot"></div>
+        <div class="stepper__dot"></div>
+        <div class="stepper__dot"></div>
+      </div>
+      <span class="stepper__text">Step 2 of 5</span>
+    </div>
+
+    <div class="header__right">
+      <button class="icon-button" type="button" aria-label="Help">
+        <span class="material-symbols-outlined">help_outline</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="onboarding-main">
+    <div class="heading">
+      <h1>Connect your AI systems</h1>
+      <p>Choose the AI providers you want to govern. You can add more later in your system settings.</p>
+    </div>
+
+    <section class="provider-grid" aria-label="Providers">
+      <article class="provider provider--openai" [class.provider--selected]="openAiEnabled">
+        <div class="provider__header">
+          <div class="provider__title">
+            <div class="provider__logo provider__logo--image" aria-hidden="true"></div>
+            <span>OpenAI</span>
+          </div>
+
+          <button class="toggle" type="button" role="switch" [attr.aria-checked]="openAiEnabled" (click)="toggleProvider('openai')">
+            <span class="toggle__thumb"></span>
+          </button>
+        </div>
+
+        <div class="provider__body" *ngIf="openAiEnabled">
+          <form class="form" [formGroup]="openAiForm" (ngSubmit)="saveAndContinue()">
+            <label class="field">
+              <span class="field__label">API Key</span>
+              <input class="field__input" type="password" placeholder="sk-..." formControlName="apiKey" />
+            </label>
+
+            <label class="field">
+              <span class="field__label">System name</span>
+              <input class="field__input" type="text" placeholder="e.g. Production GPT-4" formControlName="systemName" />
+            </label>
+
+            <div class="actions">
+              <button class="secondary-button" type="button" (click)="testConnection()" [disabled]="testing || openAiForm.invalid">
+                <span class="material-symbols-outlined">bolt</span>
+                {{ testing ? 'Testing…' : 'Test connection' }}
+              </button>
+
+              <button class="primary-button" type="submit" [disabled]="openAiForm.invalid">Save &amp; Continue</button>
+            </div>
+
+            <p class="status status--success" *ngIf="testResult === 'success'">Connection OK.</p>
+            <p class="status status--error" *ngIf="testResult === 'error'">Connection failed.</p>
+          </form>
+        </div>
+      </article>
+
+      <article class="provider">
+        <div class="provider__simple">
+          <div class="provider__top">
+            <div class="provider__title">
+              <div class="provider__logo provider__logo--anthropic" aria-hidden="true"></div>
+              <span>Anthropic</span>
+            </div>
+
+            <button class="toggle" type="button" role="switch" [attr.aria-checked]="anthropicEnabled" (click)="toggleProvider('anthropic')">
+              <span class="toggle__thumb"></span>
+            </button>
+          </div>
+
+          <p class="provider__desc">Govern Claude models via API. Access 3.5 Sonnet, Opus, and Haiku instances with enterprise controls.</p>
+
+          <button class="secondary-button" type="button" (click)="toggleProvider('anthropic')">Connect with API key</button>
+        </div>
+      </article>
+
+      <article class="provider">
+        <div class="provider__simple">
+          <div class="provider__top">
+            <div class="provider__title">
+              <div class="provider__logo provider__logo--custom" aria-hidden="true">
+                <span class="material-symbols-outlined">api</span>
+              </div>
+              <span>Custom API</span>
+            </div>
+
+            <button class="toggle" type="button" role="switch" [attr.aria-checked]="customApiEnabled" (click)="toggleProvider('custom')">
+              <span class="toggle__thumb"></span>
+            </button>
+          </div>
+
+          <p class="provider__desc">Connect via your own enterprise endpoint or self-hosted LLM instances (Llama 3, Mistral, etc.).</p>
+
+          <button class="secondary-button" type="button" (click)="toggleProvider('custom')">Add custom endpoint</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="info" aria-label="Privacy and security">
+      <span class="material-symbols-outlined info__icon" aria-hidden="true">info</span>
+      <div class="info__text">
+        <strong>Privacy &amp; Security</strong>
+        <p>Your API keys are encrypted at rest using AES-256 and never stored in plain text. ApprovalLayer only acts as a governance proxy and does not use your data for model training.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bottom-bar">
+    <div class="bottom-bar__content">
+      <button class="secondary-button" type="button" (click)="back()">
+        <span class="material-symbols-outlined">arrow_back</span>
+        Back
+      </button>
+
+      <button class="link-button" type="button" (click)="skipForNow()">Skip for now</button>
+
+      <button class="bottom-continue" type="button" [class.bottom-continue--enabled]="openAiEnabled && openAiForm.valid" [disabled]="!openAiEnabled || openAiForm.invalid">Continue</button>
+    </div>
+  </footer>
+</div>

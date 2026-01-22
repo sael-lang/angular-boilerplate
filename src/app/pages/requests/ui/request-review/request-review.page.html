@@ -1,0 +1,128 @@
+<div class="container-fluid py-3">
+  <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-3">
+    <div>
+      <a class="link-secondary text-decoration-none small" routerLink="/dashboard">&larr; Back</a>
+      <div class="d-flex flex-wrap align-items-center gap-2 mt-1">
+        <h1 class="h5 mb-0">{{ requestId }}</h1>
+        <span class="badge text-bg-warning">High risk</span>
+      </div>
+      <div class="text-body-secondary small">Submitted 2 hours ago by Legal Operations</div>
+    </div>
+    <div class="d-flex gap-2">
+      <button class="btn btn-outline-secondary btn-sm" type="button">Audit log</button>
+      <button class="btn btn-primary btn-sm" type="button">Export</button>
+    </div>
+  </div>
+
+  <div class="alert alert-warning d-flex flex-wrap justify-content-between align-items-center gap-2" role="alert">
+    <div class="fw-semibold">SLA breach warning: action required within the next 4 hours.</div>
+    <div class="d-flex align-items-center gap-2">
+      <span class="badge text-bg-light border">04h</span>
+      <span class="badge text-bg-light border">22m</span>
+      <span class="badge text-bg-light border">15s</span>
+    </div>
+  </div>
+
+  <div class="row g-3">
+    <div class="col-12 col-lg-8">
+      <div class="card shadow-sm mb-3">
+        <div class="card-body">
+          <div class="row g-3">
+            <div class="col-12 col-md-3">
+              <div class="text-body-secondary small">Category</div>
+              <div class="fw-semibold">Legal - Contract</div>
+            </div>
+            <div class="col-12 col-md-3">
+              <div class="text-body-secondary small">Requester</div>
+              <div class="fw-semibold">Sarah Chen</div>
+            </div>
+            <div class="col-12 col-md-3">
+              <div class="text-body-secondary small">AI governance</div>
+              <div class="fw-semibold">Enabled</div>
+            </div>
+            <div class="col-12 col-md-3">
+              <div class="text-body-secondary small">Context</div>
+              <div class="fw-semibold">Vendor NDA for AI tool evaluation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card shadow-sm">
+        <div class="card-header bg-transparent d-flex flex-wrap justify-content-between align-items-center gap-2">
+          <div>
+            <div class="fw-semibold">Mutual NDA - OpenAI Vendor</div>
+            <div class="text-body-secondary small">Uploaded: 2024-01-15 • 12 pages</div>
+          </div>
+          <div class="btn-group btn-group-sm" role="group" aria-label="Document actions">
+            <button class="btn btn-outline-secondary" type="button">Download</button>
+            <button class="btn btn-outline-secondary" type="button">Open</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="document-body">
+            <p>
+              <strong>1. DEFINITION OF CONFIDENTIAL INFORMATION.</strong>
+              Confidential Information means any non-public information, technical data, or know-how, including research, product plans, products, services, customers, markets, software, and finances.
+            </p>
+            <p>
+              <strong>2. NON-DISCLOSURE.</strong>
+              The parties agree not to use the Confidential Information of the other party except to evaluate a potential business relationship.
+            </p>
+            <p>
+              <strong>3. <span class="highlight-clause">INDEMNIFICATION AND LIABILITY.</span></strong>
+              <span class="highlight-clause">
+                The Receiving Party shall indemnify and hold harmless the Disclosing Party from any and all claims arising out of any breach. Total liability under this clause is capped at 5x the
+                total contract value.
+              </span>
+            </p>
+            <p>
+              <strong>4. <span class="highlight-clause">GOVERNING LAW.</span></strong>
+              <span class="highlight-clause">This Agreement is governed by Delaware law, with venue in the Northern District of California.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-4">
+      <div class="card shadow-sm mb-3">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="fw-semibold">Risk analysis</div>
+            <span class="badge text-bg-danger">2 critical</span>
+          </div>
+          <ul class="list-group list-group-flush mt-2">
+            <li class="list-group-item px-0">
+              <div class="fw-semibold">Unusual liability cap</div>
+              <div class="small text-body-secondary">Clause 3 specifies a 5x liability cap, which exceeds the standard maximum of 1x for vendor NDAs.</div>
+            </li>
+            <li class="list-group-item px-0">
+              <div class="fw-semibold">Jurisdiction mismatch</div>
+              <div class="small text-body-secondary">Governing law is Delaware but courts are in California. Policy recommends alignment to avoid complexity.</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card shadow-sm border-primary">
+        <div class="card-body">
+          <div class="fw-semibold mb-2">Decision</div>
+          <div class="mb-3">
+            <label class="form-label small text-body-secondary" for="reviewerNotes">Reviewer notes</label>
+            <textarea class="form-control" id="reviewerNotes" rows="4" placeholder="Add reviewer notes..."></textarea>
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" id="policyConfirm" type="checkbox" />
+            <label class="form-check-label small" for="policyConfirm">I reviewed deviations and confirm this aligns with policy.</label>
+          </div>
+          <div class="d-grid gap-2">
+            <button class="btn btn-success" type="button">Approve</button>
+            <button class="btn btn-warning" type="button">Request changes</button>
+            <button class="btn btn-outline-danger" type="button">Reject</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

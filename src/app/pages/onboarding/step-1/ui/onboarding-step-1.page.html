@@ -1,0 +1,66 @@
+<div class="onboarding-page">
+  <header class="onboarding-header">
+    <div class="brand">
+      <div class="brand__icon" aria-hidden="true">
+        <span class="material-symbols-outlined">shield_with_heart</span>
+      </div>
+      <span class="brand__name">ApprovalLayer</span>
+    </div>
+
+    <div class="stepper" aria-label="Onboarding progress">
+      <div class="stepper__dots" aria-hidden="true">
+        <div class="stepper__dot stepper__dot--active"></div>
+        <div class="stepper__dot"></div>
+        <div class="stepper__dot"></div>
+        <div class="stepper__dot"></div>
+        <div class="stepper__dot"></div>
+      </div>
+      <span class="stepper__text">Step 1 of 5</span>
+    </div>
+  </header>
+
+  <main class="onboarding-main">
+    <div class="content">
+      <div class="hero">
+        <h1>Let's set up your AI governance in 5 minutes</h1>
+        <p>We'll help you connect your AI systems and create your first approval workflow</p>
+      </div>
+
+      <section class="features" aria-label="Onboarding highlights">
+        <article class="feature-card">
+          <div class="feature-card__icon" aria-hidden="true">
+            <span class="material-symbols-outlined">layers</span>
+          </div>
+          <h3>Connect AI Systems</h3>
+          <p>Integrate LLMs and apps.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-card__icon" aria-hidden="true">
+            <span class="material-symbols-outlined">verified_user</span>
+          </div>
+          <h3>Define Risk Rules</h3>
+          <p>Set your safety guardrails.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-card__icon" aria-hidden="true">
+            <span class="material-symbols-outlined">group_add</span>
+          </div>
+          <h3>Add Approvers</h3>
+          <p>Invite legal &amp; dev teams.</p>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer class="onboarding-footer">
+    <div class="footer-content">
+      <button class="link-button" type="button" (click)="skip()">Skip setup, go to dashboard</button>
+      <button class="primary-button" type="button" (click)="next()">
+        Get Started
+        <span class="material-symbols-outlined primary-button__icon" aria-hidden="true"> arrow_forward </span>
+      </button>
+    </div>
+  </footer>
+</div>
