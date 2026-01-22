@@ -73,7 +73,7 @@ export function BeautifyArrayOfNumbers(input: any): number[] {
       try {
         // This handles stringifies numbers
         return Number(JSON.parse(item));
-      } catch (error) {
+      } catch {
         // If parsing fails, convert directly to Number
         return Number(item);
       }

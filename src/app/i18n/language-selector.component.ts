@@ -4,6 +4,7 @@ import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-language-selector',
+  standalone: true,
   templateUrl: './language-selector.component.html',
   styleUrls: ['./language-selector.component.scss'],
   imports: [NgClass],

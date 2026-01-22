@@ -4,9 +4,12 @@ import { LoginComponent } from '@app/auth/login/login.component';
 import { AlreadyLoggedCheckGuard } from '@app/auth/guard/authentication.guard';
 import { LogoutComponent } from '@app/auth/logout/logout.component';
 import { marker } from '@colsen1991/ngx-translate-extract-marker';
+import { onboardingRoutes } from '@pages/onboarding';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
+  // Registration/onboarding flow (no app shell layout).
+  { path: 'onboarding', children: onboardingRoutes },
   {
     path: 'login',
     canActivate: [AlreadyLoggedCheckGuard],

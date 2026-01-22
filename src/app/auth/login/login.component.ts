@@ -21,6 +21,10 @@ export class LoginComponent {
     private readonly _authService: AuthenticationService,
   ) {}
 
+  goToOnboarding(): void {
+    this._router.navigate(['/onboarding'], { queryParams: { reset: 1 } });
+  }
+
   login() {
     // Here You can call the login method from the AuthenticationService directly and pass the required parameters.
     // setting credentials and other logic will be handled in the AuthenticationService.
